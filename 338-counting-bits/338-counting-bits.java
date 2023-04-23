@@ -9,16 +9,13 @@ class Solution {
     }
     
     int toBin(int n) {
-        StringBuilder res = new StringBuilder();
         int count = 0;
         while(n > 0) {
-            res.append(n%2);
             if(n%2 == 1) {
                 count++;
             }
             n/=2;
         }
-      System.out.println(res);
       return count;
     }
 }
