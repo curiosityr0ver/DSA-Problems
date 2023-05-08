@@ -7,11 +7,8 @@ class Solution {
             sum += mat[i][n-i-1];
         }
         
-        if(n%2 == 1) {
-            sum -= mat[n/2][n/2];
-            return sum;
-        } else {
-            return sum;
-        }
+        if(n%2 == 1) sum -= mat[n/2][n/2];
+        return sum;
+           
     }
 }
