@@ -17,23 +17,23 @@ class Solution {
 
         return memo[level][i] = path;
     }
-    public int minimumTotal2(List<List<Integer>> triangle) {
-        dp = new int [100][100];
+//     public int minimumTotal2(List<List<Integer>> triangle) {
+//         dp = new int [100][100];
         
-        return help(triangle, 0, 0);
+//         return help(triangle, 0, 0);
         
-    }
+//     }
     
-    int help(List<List<Integer>> arr, int row, int col) {
-        if(dp[row][col] > 0) return dp[row][col];
+//     int help(List<List<Integer>> arr, int row, int col) {
+//         if(dp[row][col] > 0) return dp[row][col];
         
-        if(row == arr.size()-1) {
-            dp[row][col] = arr.get(row).get(col);
-        } else dp[row][col] = arr.get(row).get(col) + 
-            Math.min(
-            help(arr, row+1, col+1),
-            help(arr, row+1, col)
-        );
-        return dp[row][col];
-    }
+//         if(row == arr.size()-1) {
+//             dp[row][col] = arr.get(row).get(col);
+//         } else dp[row][col] = arr.get(row).get(col) + 
+//             Math.min(
+//             help(arr, row+1, col+1),
+//             help(arr, row+1, col)
+//         );
+//         return dp[row][col];
+//     }
 }
