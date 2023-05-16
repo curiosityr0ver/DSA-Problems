@@ -12,10 +12,11 @@ class Solution {
         if (memo[row][col] != null) return memo[row][col];
 
         int path = arr.get(row).get(col);
+        memo[row][col] = path;
         if (row < arr.size() - 1) 
-            path += Math.min(help(row + 1, col, arr), help(row + 1, col + 1, arr));
+            memo[row][col] += Math.min(help(row + 1, col, arr), help(row + 1, col + 1, arr));
 
-        return memo[row][col] = path;
+        return memo[row][col];
     }
 //     public int minimumTotal2(List<List<Integer>> triangle) {
 //         dp = new int [100][100];
