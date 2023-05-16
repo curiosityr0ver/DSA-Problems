@@ -11,8 +11,7 @@ class Solution {
     private int help(int row, int col, List<List<Integer>> arr) {
         if (memo[row][col] != null) return memo[row][col];
 
-        int path = arr.get(row).get(col);
-        memo[row][col] = path;
+        memo[row][col] = arr.get(row).get(col);
         if (row < arr.size() - 1) 
             memo[row][col] += Math.min(help(row + 1, col, arr), help(row + 1, col + 1, arr));
 
