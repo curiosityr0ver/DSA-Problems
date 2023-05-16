@@ -8,14 +8,14 @@ class Solution {
         return help(0, 0, triangle);
     }
 
-    private int help(int level, int i, List<List<Integer>> triangle) {
-        if (memo[level][i] != null) return memo[level][i];
+    private int help(int row, int col, List<List<Integer>> arr) {
+        if (memo[row][col] != null) return memo[row][col];
 
-        int path = triangle.get(level).get(i);
-        if (level < triangle.size() - 1) 
-            path += Math.min(help(level + 1, i, triangle), help(level + 1, i + 1, triangle));
+        int path = arr.get(row).get(col);
+        if (row < arr.size() - 1) 
+            path += Math.min(help(row + 1, col, arr), help(row + 1, col + 1, arr));
 
-        return memo[level][i] = path;
+        return memo[row][col] = path;
     }
 //     public int minimumTotal2(List<List<Integer>> triangle) {
 //         dp = new int [100][100];
