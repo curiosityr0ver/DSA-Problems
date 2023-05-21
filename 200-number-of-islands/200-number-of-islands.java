@@ -6,14 +6,14 @@ class Solution {
     for(int i=0;i<grid.length;i++){
         for(int j=0;j<grid[0].length;j++){
             if(grid[i][j]=='1' && !visited[i][j]){
-                drawTree(grid,i,j);
+                explore(grid,i,j);
                 count++;
             }
         }
     }
     return count;
 }
-    public void drawTree(char[][] grid, int i, int j){
+    public void explore(char[][] grid, int i, int j){
         
         if(i<0 || j<0 || i>=grid.length || j>=grid[0].length  || visited[i][j]==true || grid[i][j]=='0'){
             return;
@@ -21,9 +21,9 @@ class Solution {
         
         visited[i][j]=true;
 
-        drawTree(grid,i-1,j);
-        drawTree(grid,i,j+1);
-        drawTree(grid,i,j-1);
-        drawTree(grid,i+1,j);
+        explore(grid,i-1,j);
+        explore(grid,i,j+1);
+        explore(grid,i,j-1);
+        explore(grid,i+1,j);
     }
 }
