@@ -23,13 +23,11 @@ class Solution {
     
     
     int partition(int array[], int low, int high) {
-
-    int pivot = array[high];
     
     int i = (low - 1);
 
     for (int j = low; j < high; j++) {
-      if (hm.get(array[j]) >= hm.get(pivot)) {
+      if (hm.get(array[j]) >= hm.get(array[high])) {
 
         i++;
 
