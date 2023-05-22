@@ -1,5 +1,5 @@
 class Solution {
-    Map<Integer, Integer> hm = new TreeMap<>();
+    Map<Integer, Integer> hm = new HashMap<>();
     public int[] topKFrequent(int[] nums, int k) {
         
         for(int ele: nums) {
@@ -10,9 +10,8 @@ class Solution {
         int ind = 0;
         for(int key: hm.keySet()) {
             arr[ind++] = key;
-            System.out.print(arr[ind-1] + ", ");
         }
-        System.out.println();
+        
         int[] res = new int[k];
         quickSort(arr, 0, arr.length-1);
         for(int i = 0; i < k; i++) {
