@@ -20,7 +20,7 @@ class Solution {
                if(x + y == 2) res+=2;
                
            } else {
-               if(x == 0 && y == 0) res++;
+               if(x+y == 0) res++;
            }
             // if(x == 1 && y == 0 && z == 0) res++;
             // else if(x == 0 && y == 1 && z == 0) res++;
