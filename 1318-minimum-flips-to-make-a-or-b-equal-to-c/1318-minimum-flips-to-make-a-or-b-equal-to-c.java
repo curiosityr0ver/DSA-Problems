@@ -16,9 +16,8 @@ class Solution {
             int z = c1.get(i);
             
            if(z == 0) {
-               if(x == 0 && y == 1) res++;
-               if(x == 1 && y == 0) res++;
-               if(x == 1 && y == 1) res+=2;
+               if(x + y == 1) res++;
+               if(x + y == 2) res+=2;
                
            } else {
                if(x == 0 && y == 0) res++;
