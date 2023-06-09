@@ -15,11 +15,18 @@ class Solution {
             int y = b1.get(i);
             int z = c1.get(i);
             
-           
-            if(x == 1 && y == 0 && z == 0) res++;
-            else if(x == 0 && y == 1 && z == 0) res++;
-            else if(x == 1 && y == 1 && z == 0) res+=2;
-            else if(x == 0 && y == 0 && z == 1) res++;
+           if(z == 0) {
+               if(x == 0 && y == 1) res++;
+               if(x == 1 && y == 0) res++;
+               if(x == 1 && y == 1) res+=2;
+               
+           } else {
+               if(x == 0 && y == 0) res++;
+           }
+            // if(x == 1 && y == 0 && z == 0) res++;
+            // else if(x == 0 && y == 1 && z == 0) res++;
+            // else if(x == 1 && y == 1 && z == 0) res+=2;
+            // else if(x == 0 && y == 0 && z == 1) res++;
 
         }
 
