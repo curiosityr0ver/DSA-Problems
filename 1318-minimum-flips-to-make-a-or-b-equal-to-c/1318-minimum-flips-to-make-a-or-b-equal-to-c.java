@@ -9,9 +9,9 @@ class Solution {
         while(b1.size() < len) b1.add(0);
         while(c1.size() < len) c1.add(0);
         
-        Collections.reverse(a1);
-        Collections.reverse(b1);
-        Collections.reverse(c1);
+        // Collections.reverse(a1);
+        // Collections.reverse(b1);
+        // Collections.reverse(c1);
 
         int res = 0;
         for(int i = 0; i < len; i++) {
