@@ -13,8 +13,9 @@ class Solution {
         for(int i = 0; i < len; i++) {
             
            if(c1.get(i) == 0) {
-               if(a1.get(i) + b1.get(i) == 1) res++;
-               if(a1.get(i) + b1.get(i) == 2) res+=2;
+               res += a1.get(i) + b1.get(i);
+               // if( == 1) res++;
+               // if(a1.get(i)  b1.get(i) == 2) res+=2;
                
            } else {
                if(a1.get(i) + b1.get(i) == 0) res++;
