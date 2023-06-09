@@ -14,8 +14,6 @@ class Solution {
             
            if(c1.get(i) == 0) {
                res += a1.get(i) + b1.get(i);
-               // if( == 1) res++;
-               // if(a1.get(i)  b1.get(i) == 2) res+=2;
                
            } else {
                if(a1.get(i) + b1.get(i) == 0) res++;
