@@ -17,9 +17,9 @@ class Solution {
             
            
             if(x == 1 && y == 0 && z == 0) res++;
-            if(x == 0 && y == 1 && z == 0) res++;
-            if(x == 1 && y == 1 && z == 0) res+=2;
-            if(x == 0 && y == 0 && z == 1) res++;
+            else if(x == 0 && y == 1 && z == 0) res++;
+            else if(x == 1 && y == 1 && z == 0) res+=2;
+            else if(x == 0 && y == 0 && z == 1) res++;
 
         }
 
