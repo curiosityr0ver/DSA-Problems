@@ -6,12 +6,8 @@ class Solution {
         do {
 
             
-           if(c%2 == 0) {
-               res += a%2 + b%2;
-               
-           } else {
-               if(a%2 + b%2 == 0) res++;
-           }
+           if(c%2 == 0) res += a%2 + b%2; 
+           else if(a%2 + b%2 == 0) res++;
             
             a /= 2;
             b /= 2;
