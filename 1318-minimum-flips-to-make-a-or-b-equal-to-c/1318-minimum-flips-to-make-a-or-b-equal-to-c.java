@@ -1,7 +1,7 @@
 class Solution {
     public int minFlips(int a, int b, int c) {
 
-        int x, y, z, res = 0;
+        int res = 0;
         
         do {
 
