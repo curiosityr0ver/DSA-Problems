@@ -10,6 +10,15 @@ class Solution {
         while(c1.size() < len) c1.add(0);
 
         int res = 0;
+//         for(int i = 0; i < len; i++) {
+            
+//            if(c1.get(i) == 0) {
+//                res += a1.get(i) + b1.get(i);
+               
+//            } else {
+//                if(a1.get(i) + b1.get(i) == 0) res++;
+//            }
+//         }
         for(int i = 0; i < len; i++) {
             
            if(c1.get(i) == 0) {
