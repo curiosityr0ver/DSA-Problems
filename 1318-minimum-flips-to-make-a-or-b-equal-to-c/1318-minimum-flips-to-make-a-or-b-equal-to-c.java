@@ -14,7 +14,8 @@ class Solution {
             int x = a1.get(i);
             int y = b1.get(i);
             int z = c1.get(i);
-
+            
+           
             if(x == 1 && y == 0 && z == 0) res++;
             if(x == 0 && y == 1 && z == 0) res++;
             if(x == 1 && y == 1 && z == 0) res+=2;
