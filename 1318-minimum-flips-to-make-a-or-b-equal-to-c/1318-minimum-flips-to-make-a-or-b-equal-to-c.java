@@ -13,12 +13,6 @@ class Solution {
         Collections.reverse(b1);
         Collections.reverse(c1);
 
-        
-        display(a1);
-        display(b1);
-        display(c1);
-        
-        System.out.println();
         int res = 0;
         for(int i = 0; i < len; i++) {
             int x = a1.get(i);
@@ -30,9 +24,6 @@ class Solution {
             if(x == 1 && y == 1 && z == 0) res+=2;
             if(x == 0 && y == 0 && z == 1) res++;
 
-            
-            
-            System.out.println(a1.get(i) + "|" + b1.get(i) + " = " + c1.get(i));
         }
 
         return res;
@@ -46,11 +37,5 @@ class Solution {
             n /= 2;
         } 
         return res;
-    }
-    void display(List<Integer> res) {
-        System.out.println();
-        for(int ele: res) {
-            System.out.print(ele + ", ");
-        }
     }
 }
