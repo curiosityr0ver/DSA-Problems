@@ -3,8 +3,8 @@ class Solution {
         Arrays.sort(arr);
         
         for(int i = 0; i < arr.length; i++) {
-            int res = rec(0, arr.length-1, arr, arr[i]*2);
-            if(res != i && res != -1)
+            int position = rec(0, arr.length-1, arr, arr[i]*2);
+            if(position != i && position != -1)
             {
                 return true;
             }
