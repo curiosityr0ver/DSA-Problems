@@ -4,7 +4,7 @@ class Solution {
         
         for(int i = 0; i < arr.length; i++) {
             int position = rec(0, arr.length-1, arr, arr[i]*2);
-            if(position != i && position != -1)
+            if(position != i && position >= 0)
             {
                 return true;
             }
