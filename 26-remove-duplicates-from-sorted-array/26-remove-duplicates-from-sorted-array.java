@@ -9,10 +9,10 @@ class Solution {
             }
         }
         
-        int count = 0;   
-        for(int ele: arr) {
-            nums[count++] = ele;
+        for(int i = 0; i < arr.size(); i++)  {
+           nums[i] = arr.get(i);
         }
-        return count;            
+
+        return arr.size();            
     }
 }
