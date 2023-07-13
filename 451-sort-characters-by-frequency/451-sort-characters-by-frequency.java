@@ -7,7 +7,7 @@ class Solution {
         }
         String res = "";
         while (res.length() < s.length()) {
-            char ch = maxChar(hm);
+            char ch = highestFreq(hm);
             int max = hm.get(ch);
             while (max > 0) {
                 res += ch;
@@ -17,7 +17,7 @@ class Solution {
         }
         return res;
     }
-    public char maxChar(HashMap<Character, Integer> hm) {
+    public char highestFreq(HashMap<Character, Integer> hm) {
         int max = 0;
         char val = 0;
         for (Map.Entry<Character, Integer> kEntry : hm.entrySet()) {
