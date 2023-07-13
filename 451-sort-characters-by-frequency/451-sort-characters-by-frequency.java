@@ -1,31 +1,26 @@
 class Solution {
      public String frequencySort(String s) {
-        // creqate the hashmap with key characters and value integers
-        HashMap<Character, Integer> map = new HashMap<>();
-        // put with the frequency in map
+        HashMap<Character, Integer> hm = new HashMap<>();
+
         for (int i = 0; i < s.length(); i++) {
-            map.put(s.charAt(i), map.getOrDefault(s.charAt(i), 0) + 1);
+            hm.put(s.charAt(i), hm.getOrDefault(s.charAt(i), 0) + 1);
         }
-        StringBuilder sb = new StringBuilder();
-        // while not > than length just append the most frequent character in sb
-        while (sb.length() < s.length()) {
-            // find the most frequent character
-            char c = maxChar(map);
-            int max = map.get(c);
+        String res = "";
+        while (res.length() < s.length()) {
+            char ch = maxChar(hm);
+            int max = hm.get(ch);
             while (max > 0) {
-                // append until max > 0
-                sb.append(c);
+                res += ch;
                 max--;
             }
-            // now remove that most frequent element from map
-            map.remove(c);
+            hm.remove(ch);
         }
-        return sb.toString();
+        return res;
     }
-    public char maxChar(HashMap<Character, Integer> map) {
+    public char maxChar(HashMap<Character, Integer> hm) {
         int max = 0;
         char val = 0;
-        for (Map.Entry<Character, Integer> kEntry : map.entrySet()) {
+        for (Map.Entry<Character, Integer> kEntry : hm.entrySet()) {
             if (max < kEntry.getValue()) {
                 val = kEntry.getKey();
                 max = kEntry.getValue();
