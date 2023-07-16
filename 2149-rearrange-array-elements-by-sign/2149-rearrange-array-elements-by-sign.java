@@ -3,8 +3,7 @@ class Solution {
         
         
         int[] res = new int[nums.length];
-        int count = 0;
-        int ptr1 = 0, ptr2 = 0;
+        int count = 0, ptr1 = 0, ptr2 = 0;
         
         while(count < nums.length) {
             
@@ -13,7 +12,6 @@ class Solution {
             res[count++] = nums[ptr1++];
             res[count++] = nums[ptr2++];
         }
-        
         return res;
     }
 }
