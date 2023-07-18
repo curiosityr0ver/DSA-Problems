@@ -9,30 +9,23 @@
  * }
  */
 class Solution {
-    
     public ListNode reverseList(ListNode head) {
-        if(head == null) return head;
-        ArrayList<Integer> arr = new ArrayList<>();
-        ListNode point = head;
         
-        while(point != null) {
-            arr.add(point.val);
-            point = point.next;
+        ListNode temp = head;
+        Stack<Integer> stk = new Stack<>();
+        
+        while(temp != null) {
+            stk.push(temp.val);
+            temp = temp.next;
         }
         
-        Collections.reverse(arr);
-
+        temp = head;
         
-        ListNode root = new ListNode();
-        point = root;
-        
-        for(int i = 0; i < arr.size()-1; i++) {
-            point.val = arr.get(i);
-            point.next = new ListNode();
-            point = point.next;
+        while(temp != null) {
+            temp.val = stk.pop();
+            temp = temp.next;
         }
-        point.val = arr.get(arr.size()-1);
-        return root;
         
+        return head;
     }
 }
