@@ -1,14 +1,18 @@
 class Solution {
     public int removeDuplicates(int[] nums) {
-        TreeSet<Integer> temp = new TreeSet<>();
+        List<Integer> al = new ArrayList<>();
         
-        for(int ele: nums) {
-            temp.add(ele);
-        } 
-        int count = 0;   
-        for(int ele: temp) {
-            nums[count++] = ele;
+        al.add(nums[0]);
+        for(int i = 1; i < nums.length; i++)  {
+            if(nums[i] != nums[i-1]) {
+                al.add(nums[i]);
+            }
         }
-        return count;
+        
+        for(int i = 0; i < al.size(); i++)  {
+           nums[i] = al.get(i);
+        }
+
+        return al.size();            
     }
 }
