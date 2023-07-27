@@ -12,10 +12,8 @@ class Solution {
             temp = temp.substring(1) +  s.charAt(i);
             hm.put(temp, hm.getOrDefault(temp, 0) + 1);
         }        
-        for(String key: hm.keySet()) {
-            System.out.println(key + ": " + hm.get(key));
-            if(hm.get(key) > 1) res.add(key);
-        }        
+        for(String key: hm.keySet()) if(hm.get(key) > 1) res.add(key);
+            
         return res;            
     }
 }
