@@ -3,17 +3,16 @@ class Solution {
         List<String> res = new ArrayList<>();
         if(s.length() < 10) return res; 
         
-        HashMap<String, Integer> hm = new HashMap<>();
+        HashSet<String> hm = new HashSet<>();
         
         String temp = s.substring(0,10);
-        hm.put(temp, hm.getOrDefault(temp, 0) + 1);
+        hm.add(temp);
 
         for(int i = 10; i < s.length(); i++) {
             temp = temp.substring(1) +  s.charAt(i);
-            hm.put(temp, hm.getOrDefault(temp, 0) + 1);
-        }        
-        for(String key: hm.keySet()) if(hm.get(key) > 1) res.add(key);
-            
+            if(hm.contains(temp) && !res.contains(temp))  res.add(temp);
+            else hm.add(temp);
+        }                    
         return res;            
     }
 }
