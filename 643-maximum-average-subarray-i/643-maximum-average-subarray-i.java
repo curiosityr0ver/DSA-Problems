@@ -4,8 +4,8 @@ class Solution {
         while (i < k) avg += nums[i++];
         
         int res = avg;
-        for(; i < nums.length; i++) {
-            avg = avg - nums[i-k] + nums[i];
+        while(i < nums.length) {
+            avg = avg - nums[i-k] + nums[i++];
             res = Math.max(res, avg);
         }
         return (double)res/k;
