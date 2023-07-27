@@ -19,10 +19,8 @@ class Solution {
         
         int res = 0;
         
-        for(int i = 0; i < len; i++) {
-            System.out.println(binx.charAt(i) + ", " + biny.charAt(i));
-           if(binx.charAt(i) != biny.charAt(i)) res++; 
-        }
+        for(int i = 0; i < len; i++) if(binx.charAt(i) != biny.charAt(i)) res++; 
+        
 
         
         return res;
