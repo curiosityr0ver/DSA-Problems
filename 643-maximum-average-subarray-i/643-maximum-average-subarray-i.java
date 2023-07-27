@@ -8,11 +8,9 @@ class Solution {
         }
         res = avg;
         for(; i < nums.length; i++) {
-            System.out.println(avg);
             avg = avg - nums[i-k] + nums[i];
             res = Math.max(res, avg);
         }
-        System.out.println(avg);
         return res/k;
     }
 }
