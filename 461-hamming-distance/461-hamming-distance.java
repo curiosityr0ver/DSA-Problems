@@ -12,17 +12,14 @@ class Solution {
             y = y/2;
         }
         
-        int len = Math.max(binx.length(), biny.length());
+        int len = Math.max(binx.length(), biny.length()), res = 0;
         
         binx = binx.reverse();
         biny = biny.reverse();
         
-        System.out.println(binx + ", " + biny);
         while(binx.length() < len) binx = binx.insert(0, "0");
         while(biny.length() < len) biny = biny.insert(0, "0"); 
-        System.out.println(binx + ", " + biny);
 
-        int res = 0;
         
         for(int i = 0; i < len; i++) if(binx.charAt(i) != biny.charAt(i)) res++; 
         
