@@ -5,7 +5,7 @@ class Solution {
         
         int res = avg;
         while(i < nums.length) {
-            avg = avg - nums[i-k] + nums[i++];
+            avg -=  nums[i-k] - nums[i++];
             res = Math.max(res, avg);
         }
         return (double)res/k;
