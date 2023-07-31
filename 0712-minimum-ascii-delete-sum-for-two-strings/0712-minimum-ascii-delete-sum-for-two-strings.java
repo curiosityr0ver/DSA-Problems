@@ -14,16 +14,12 @@ class Solution {
             return dp[i][j];
         if (i == s1.length()) {
             int sum = 0;
-            for (int k = j; k < s2.length(); k++) {
-                sum += s2.charAt(k);
-            }
+            for (int k = j; k < s2.length(); k++) sum += s2.charAt(k);
             return sum;
         }
         if (j == s2.length()) {
             int sum = 0;
-            for (int k = i; k < s1.length(); k++) {
-                sum += s1.charAt(k);
-            }
+            for (int k = i; k < s1.length(); k++) sum += s1.charAt(k);
             return sum;
         }
         int nt = Math.min(s1.charAt(i) + solve(s1, s2, i + 1, j), s2.charAt(j) + solve(s1, s2, i, j + 1));
