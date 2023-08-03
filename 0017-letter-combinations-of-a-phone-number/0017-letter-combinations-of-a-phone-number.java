@@ -11,9 +11,8 @@ class Solution {
     void helper(String str, int index, String digits) {
         if(index == digits.length()) res.add(str);
         else {
-            char ch = digits.charAt(index);
             index++;
-            switch(ch) {
+            switch(digits.charAt(index-1)) {
               case '2':
                 helper(str + "a", index, digits);
                 helper(str + "b", index, digits);
