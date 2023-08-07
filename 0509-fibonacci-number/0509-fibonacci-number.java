@@ -4,11 +4,11 @@ class Solution {
         if(n < 2) return n;
         int a = 0, b = 1, c = 0;
         int i = 0;
-        while(i++ < n-1) {
-            // System.out.print(c + ", ");
-            c = a + b;
+        while(i++ < n) {
             a = b;
             b = c;
+            c = a + b;
+
         }
         return c;
     }
