@@ -1,5 +1,5 @@
 class Solution {
-    public boolean searchMatrix(int[][] matrix, int target) {
+    public boolean searchMatrix2(int[][] matrix, int target) {
         int top = 0, bottom = matrix.length-1, mid;
         int [] temp;
         while(top <= bottom) {
@@ -20,6 +20,11 @@ class Solution {
             } else if(target < temp[0]) bottom = mid -1;
             else top = mid + 1;
         }
+        return false;
+    }
+    
+    public boolean searchMatrix(int[][] matrix, int target) {
+        for(int [] row: matrix) for(int ele: row) if(ele == target) return true;
         return false;
     }
 }
