@@ -10,19 +10,18 @@ class Solution {
             
             if(target >= temp[0] && target <= temp[matrix[0].length-1]) {
                 
-                int left = 0;
-                int right = matrix[0].length-1;
-                int center = (left+right)/2;
+                top = 0;
+                bottom = matrix[0].length-1;
                 
-                while(left <= right) {
-                    mid = (left + right)/2;
+                while(top <= bottom) {
+                    mid = (top + bottom)/2;
                     
                     if(target == temp[mid]) {
                         return true;
                     } else if(target > temp[mid]) {
-                        left = mid + 1;
+                        top = mid + 1;
                     } else {
-                        right = mid - 1;
+                        bottom = mid - 1;
                     }
                 }
                 break;
