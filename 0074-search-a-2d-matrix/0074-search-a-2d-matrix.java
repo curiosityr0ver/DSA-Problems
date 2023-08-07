@@ -1,12 +1,10 @@
 class Solution {
     public boolean searchMatrix(int[][] matrix, int target) {
-        int top = 0;
-        int bottom = matrix.length-1;
-        
+        int top = 0, bottom = matrix.length-1, mid;
+        int [] temp;
         while(top <= bottom) {
-            int mid = (top+bottom)/2;
-            
-            int [] temp = matrix[mid];
+            mid = (top+bottom)/2;
+            temp = matrix[mid];
             
             if(target >= temp[0] && target <= temp[matrix[0].length-1]) {
                 
@@ -24,7 +22,7 @@ class Solution {
                         bottom = mid - 1;
                     }
                 }
-                break;
+                return false;
             } else if(target < temp[0]) {
                 bottom = mid -1;
             } else {
