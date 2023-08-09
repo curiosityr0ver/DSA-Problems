@@ -11,9 +11,7 @@ class Solution {
 
         if(arr[0]>0&&arr[1]>0&&arr[2]>0){
 
-        if(s.charAt(i)=='a')arr[0]--;
-        if(s.charAt(i)=='b')arr[1]--;
-        if(s.charAt(i)=='c')arr[2]--;
+        arr[s.charAt(i) - 'a']--;
         count+=(s.length()-j+1);
         continue;
 
@@ -23,9 +21,8 @@ class Solution {
 
         while(j<s.length()&&(arr[0]==0||arr[1]==0||arr[2]==0)){
 
-            if(s.charAt(j)=='a')arr[0]++;
-            if(s.charAt(j)=='b')arr[1]++;
-            if(s.charAt(j)=='c')arr[2]++;
+            arr[s.charAt(j) - 'a']++;
+
 
             j++;
 
@@ -34,9 +31,8 @@ class Solution {
         if(arr[0]>0&&arr[1]>0&&arr[2]>0)
         count+=(s.length()-j+1);
 
-        if(s.charAt(i)=='a')arr[0]--;
-        if(s.charAt(i)=='b')arr[1]--;
-        if(s.charAt(i)=='c')arr[2]--;
+        arr[s.charAt(i) - 'a']--;
+
 
     }
 
