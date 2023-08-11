@@ -1,10 +1,11 @@
 class Solution {
     int [] coinsArr;
-    int[][] dp = new int[1000][10000];
+    int[][] dp;
     int res = 0;
     
     public int change(int amount, int[] coins) {
         coinsArr = coins;
+        dp = new int[coins.length+1][amount+1];
         
         for(int [] row: dp) {
             Arrays.fill(row, -1);
