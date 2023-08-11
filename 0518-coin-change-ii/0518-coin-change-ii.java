@@ -23,7 +23,6 @@ class Solution {
             
         } else {
             int sum = 0;
-            int res = 0;
             while(amt >= sum) {
                 dp[index][amt] += dfs(index+1, amt-sum);
                 sum += coinsArr[index];
