@@ -25,10 +25,10 @@ class Solution {
             int sum = 0;
             int res = 0;
             while(amt >= sum) {
-                res += dfs(index+1, amt-sum);
+                dp[index][amt] += dfs(index+1, amt-sum);
                 sum += coinsArr[index];
             }
-            dp[index][amt] = res; 
+            dp[index][amt]++; 
         }
         
         return dp[index][amt];
