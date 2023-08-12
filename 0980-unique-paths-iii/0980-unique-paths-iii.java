@@ -23,14 +23,14 @@ class Solution {
         if(grid[x][y] == 2) {
             
             if(visArr.length != count) return 0;
-            for(String v: visArr) {
-                if(v.length() == 0) continue;
+//             for(String v: visArr) {
+//                 if(v.length() == 0) continue;
                 
-                String tempX = v.split(",")[0];
-                String tempY = v.split(",")[1];
-                System.out.print("(" + tempX + ", " + tempY + "), ");
-            }
-            // System.out.println();
+//                 String tempX = v.split(",")[0];
+//                 String tempY = v.split(",")[1];
+//                 System.out.print("(" + tempX + ", " + tempY + "), ");
+//             }
+//             System.out.println();
             return 1;
         }
         
