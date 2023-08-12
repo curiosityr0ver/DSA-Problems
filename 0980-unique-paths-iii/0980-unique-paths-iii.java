@@ -5,7 +5,7 @@ class Solution {
         for(int i = 0; i < grid.length; i++) {
             for(int j = 0; j < grid[0].length; j++) {
                 if(grid[i][j] == 0) count++;
-                if(grid[i][j] == 1) {
+                else if(grid[i][j] == 1) {
                     x = i;
                     y = j;
                 }
@@ -39,10 +39,7 @@ class Solution {
         
             for(String v: visArr) {
                 if(v.length() == 0) continue;
-                
-                String tempX = v.split(",")[0];
-                String tempY = v.split(",")[1];
-                if(x == Integer.parseInt(tempX) && y == Integer.parseInt(tempY)) return 0;
+                if(x == Integer.parseInt(v.split(",")[0]) && y == Integer.parseInt(v.split(",")[1])) return 0;
 
             }    
             vis += x + "," + y + " ";
