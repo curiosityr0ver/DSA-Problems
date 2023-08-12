@@ -39,7 +39,8 @@ class Solution {
         
             for(String v: visArr) {
                 if(v.length() == 0) continue;
-                if(x == Integer.parseInt(v.split(",")[0]) && y == Integer.parseInt(v.split(",")[1])) return 0;
+                String [] pair = v.split(",");
+                if(x == Integer.parseInt(pair[0]) && y == Integer.parseInt(pair[1])) return 0;
 
             }    
             vis += x + "," + y + " ";
