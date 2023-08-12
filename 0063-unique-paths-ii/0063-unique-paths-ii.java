@@ -1,7 +1,8 @@
 class Solution {
-    int [][] dp = new int [1000][1000];
+    int [][] dp;
     public int uniquePathsWithObstacles(int[][] grid) {
         
+        dp = new int[grid.length+1][grid[0].length+1];
         for(int [] row: dp) {
             Arrays.fill(row, -1);
         }
