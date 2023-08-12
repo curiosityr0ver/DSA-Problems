@@ -17,12 +17,10 @@ class Solution {
     
     int dfs(int x, int y, String vis, int [][] grid) {
         if(x == grid.length || y == grid[0].length || x < 0 || y < 0 || grid[x][y] == -1) return 0;
-        
-        String[] visArr = vis.split(" ");
 
         if(grid[x][y] == 2) {
             
-            return visArr.length == count ? 1 : 0;
+            return vis.split(" ").length == count ? 1 : 0;
 //             for(String v: visArr) {
 //                 if(v.length() == 0) continue;
                 
@@ -34,7 +32,7 @@ class Solution {
         }
         
         
-            for(String v: visArr) {
+            for(String v: vis.split(" ")) {
                 if(v.length() == 0) continue;
                 String [] pair = v.split(",");
                 if(x == Integer.parseInt(pair[0]) && y == Integer.parseInt(pair[1])) return 0;
