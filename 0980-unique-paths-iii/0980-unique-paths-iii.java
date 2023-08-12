@@ -25,9 +25,8 @@ class Solution {
 //             System.out.println();
         }
         
-            if(vis.length() > 0) {
-                for(String v: vis.split(" ")) if(v.equals(x + "," + y)) return 0;
-            }
+            if(vis.length() > 0) for(String v: vis.split(" ")) if(v.equals(x + "," + y)) return 0;
+            
 
             vis += x + "," + y + " ";
 
