@@ -28,11 +28,11 @@ class Solution {
                 
                 String tempX = v.split(",")[0];
                 String tempY = v.split(",")[1];
-                System.out.print("(" + tempX + ", " + tempY + "), ");
+                // System.out.print("(" + tempX + ", " + tempY + "), ");
                 // if(x == Integer.parseInt(tempX) && y == Integer.parseInt(tempY)) return 0;
 
             }
-            System.out.println();
+            // System.out.println();
             return 1;
         }
         
