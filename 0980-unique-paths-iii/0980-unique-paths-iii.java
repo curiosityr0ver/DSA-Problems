@@ -21,21 +21,16 @@ class Solution {
         if(grid[x][y] == 2) {
             
             return vis.split(" ").length == count ? 1 : 0;
-//             for(String v: visArr) {
-//                 if(v.length() == 0) continue;
-                
-//                 String tempX = v.split(",")[0];
-//                 String tempY = v.split(",")[1];
-//                 System.out.print("(" + tempX + ", " + tempY + "), ");
-//             }
+//             for(String v: visArr) System.out.print("(" + v.split(",")[0] + ", " + v.split(",")[1] + "), ");
 //             System.out.println();
         }
         
         
             for(String v: vis.split(" ")) {
                 if(v.length() == 0) continue;
-                String [] pair = v.split(",");
-                if(x == Integer.parseInt(pair[0]) && y == Integer.parseInt(pair[1])) return 0;
+                // String [] pair = v.split(",");
+                if(v.equals(x + "," + y)) return 0;
+                // if(x == Integer.parseInt(pair[0]) && y == Integer.parseInt(pair[1])) return 0;
 
             }    
             vis += x + "," + y + " ";
