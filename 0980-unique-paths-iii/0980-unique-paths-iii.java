@@ -22,7 +22,7 @@ class Solution {
 
         if(grid[x][y] == 2) {
             
-            if(visArr.length != count) return 0;
+            return visArr.length == count ? 1 : 0;
 //             for(String v: visArr) {
 //                 if(v.length() == 0) continue;
                 
@@ -31,7 +31,6 @@ class Solution {
 //                 System.out.print("(" + tempX + ", " + tempY + "), ");
 //             }
 //             System.out.println();
-            return 1;
         }
         
         
