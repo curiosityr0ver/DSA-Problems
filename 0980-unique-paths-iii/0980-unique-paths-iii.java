@@ -25,14 +25,10 @@ class Solution {
 //             System.out.println();
         }
         
-        
-            for(String v: vis.split(" ")) {
-                if(v.length() == 0) continue;
-                // String [] pair = v.split(",");
-                if(v.equals(x + "," + y)) return 0;
-                // if(x == Integer.parseInt(pair[0]) && y == Integer.parseInt(pair[1])) return 0;
+            if(vis.length() > 0) {
+                for(String v: vis.split(" ")) if(v.equals(x + "," + y)) return 0;
+            }
 
-            }    
             vis += x + "," + y + " ";
 
         return dfs(x, y+1, vis, grid) + dfs(x, y-1, vis, grid) + dfs(x+1, y, vis, grid) + dfs(x-1, y, vis, grid);
