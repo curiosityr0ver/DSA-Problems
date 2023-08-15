@@ -5,7 +5,7 @@ class Solution {
         
         for(int ele: nums) {
             if(Math.abs(ele) < Math.abs(res)) res = ele;
-            else if((ele > 0 ? ele : -1*ele) == Math.abs(res)) res = res > 0 ? res : ele;
+            else if((ele > 0 ? ele : -ele) == Math.abs(res)) res = res > 0 ? res : ele;
         }
         
         return res;
