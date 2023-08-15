@@ -5,7 +5,7 @@ class Solution {
         
         for(int ele: nums) {
             if(Math.abs(ele) < Math.abs(res)) res = ele;
-            else if(Math.abs(ele) == Math.abs(res)) res = Math.max(res, ele);
+            else if(Math.abs(ele) == Math.abs(res)) res = res > 0 ? res : ele;
         }
         
         return res;
