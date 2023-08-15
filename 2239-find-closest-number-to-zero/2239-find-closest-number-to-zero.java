@@ -4,8 +4,9 @@ class Solution {
         int res = 999999;
         
         for(int ele: nums) {
-            if(Math.abs(ele) < Math.abs(res)) res = ele;
-            else if((ele > 0 ? ele : -ele) == Math.abs(res)) res = res > 0 ? res : ele;
+            
+            if((ele > 0 ? ele : -ele) < (res > 0 ? res : -res)) res = ele;
+            else if((ele > 0 ? ele : -ele) == (res > 0 ? res : -res)) res = res > 0 ? res : ele;
         }
         
         return res;
