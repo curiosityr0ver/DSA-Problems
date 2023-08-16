@@ -1,11 +1,8 @@
 class Solution {
     public int[] sumEvenAfterQueries(int[] nums, int[][] queries) {
         int [] ans = new int [queries.length];
-        int j = 0;
-        
-        int sum = 0;  
+        int j = 0, sum = 0;  
         for(int ele: nums) sum += ele%2 == 0 ? ele : 0;
-        System.out.println(sum);
 
         
         for(int[] pair: queries) {
