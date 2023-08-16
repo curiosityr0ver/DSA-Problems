@@ -6,12 +6,9 @@ class Solution {
 
         
         for(int[] pair: queries) {
-        
             if(nums[pair[1]] % 2 == 0) {
-                if(pair[0]%2 == 0) {
-                    sum += pair[0];
-                } else sum -= nums[pair[1]];
-            
+                if(pair[0]%2 == 0) sum += pair[0];
+                else sum -= nums[pair[1]];
             } else if(pair[0]%2 != 0)sum += nums[pair[1]] + pair[0];
 
             nums[pair[1]] += pair[0];                      
