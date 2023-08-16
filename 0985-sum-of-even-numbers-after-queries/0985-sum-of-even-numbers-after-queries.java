@@ -20,7 +20,7 @@ class Solution {
                     sum -= nums[index];
                 }
             } else {
-                if(Math.abs(val)%2 == 1) {
+                if(val%2 != 0) {
                     sum += nums[index] + val;
                 }
             }
