@@ -1,10 +1,10 @@
 class Solution {
     public int[] maxSlidingWindow(int[] nums, int k) {
         int [] list = new int[nums.length - k + 1];
-        int max = Integer.MIN_VALUE;
+        int max = nums[0];
         int ind = 0, count = 0;
 
-        for(int i = 0; i < k; i++)
+        for(int i = 1; i < k; i++)
             if(max <= nums[i]){
                 ind = i;
                 max = nums[i];
@@ -34,7 +34,7 @@ class Solution {
                     }
 
                 max = tempMax;
-            list[count++] = max;
+                list[count++] = max;
             }
 
             i++;
