@@ -24,7 +24,6 @@ class Solution {
                     sum += nums[index] + val;
                 }
             }
-            System.out.println(nums[index]%2 + ", " + val%2);
             nums[index] += val;                      
             ans[j++] = sum;  
         }
