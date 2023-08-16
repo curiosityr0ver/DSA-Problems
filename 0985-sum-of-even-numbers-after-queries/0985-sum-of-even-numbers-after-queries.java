@@ -13,21 +13,20 @@ class Solution {
             int val = pair[0];
             int index = pair[1];
         
-            if(nums[index] % 2 == 0) {
-                if(val%2 == 0) {
-                    sum += val;
+            if(nums[pair[1]] % 2 == 0) {
+                if(pair[0]%2 == 0) {
+                    sum += pair[0];
                 } else {
-                    sum -= nums[index];
+                    sum -= nums[pair[1]];
                 }
             } else {
-                if(val%2 != 0) {
-                    sum += nums[index] + val;
+                if(pair[0]%2 != 0) {
+                    sum += nums[pair[1]] + pair[0];
                 }
             }
-            nums[index] += val;                      
+            nums[pair[1]] += pair[0];                      
             ans[j++] = sum;  
         }
-        
         return ans;
     }
 }
