@@ -3,15 +3,30 @@ class Solution {
         int [] ans = new int [queries.length];
         int j = 0;
         
-        for(int[] pair: queries) {
+        int sum = 0;  
+        for(int ele: nums) sum += ele%2 == 0 ? ele : 0;
+        System.out.println(sum);
 
-            nums[pair[1]] +=  pair[0];
+        
+        for(int[] pair: queries) {
             
-            int res = 0;
-            
-            for(int ele: nums) res += ele%2 == 0 ? ele : 0;
-            
-            ans[j++] = res;  
+            int val = pair[0];
+            int index = pair[1];
+        
+            if(Math.abs(nums[index]) % 2 == 0) {
+                if(Math.abs(val)%2 == 0) {
+                    sum += val;
+                } else {
+                    sum -= nums[index];
+                }
+            } else {
+                if(Math.abs(val)%2 == 1) {
+                    sum += nums[index] + val;
+                }
+            }
+            System.out.println(nums[index]%2 + ", " + val%2);
+            nums[index] += val;                      
+            ans[j++] = sum;  
         }
         
         return ans;
