@@ -13,8 +13,8 @@ class Solution {
             int val = pair[0];
             int index = pair[1];
         
-            if(Math.abs(nums[index]) % 2 == 0) {
-                if(Math.abs(val)%2 == 0) {
+            if(nums[index] % 2 == 0) {
+                if(val%2 == 0) {
                     sum += val;
                 } else {
                     sum -= nums[index];
