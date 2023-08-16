@@ -1,8 +1,8 @@
 class Solution {
     public int[] maxSlidingWindow(int[] nums, int k) {
-        ArrayList<Integer> list = new ArrayList<>();
+        int [] list = new int[nums.length - k + 1];
         int max = Integer.MIN_VALUE;
-        int ind = 0;
+        int ind = 0, count = 0;
 
         for(int i = 0; i < k; i++)
             if(max <= nums[i]){
@@ -10,19 +10,19 @@ class Solution {
                 max = nums[i];
             }
 
-        list.add(max);
+        list[count++] = max;
 
         int i = 1;
         int j = i+k-1;
 
         while(j < nums.length){
             if(ind >= i && max > nums[j]){
-                list.add(max);
+            list[count++] = max;
             }
             else if(ind >= i && max <= nums[j]){
                 ind = j;
                 max = nums[j];
-                list.add(max);
+            list[count++] = max;
             }
             else if(ind < i){
                 int tempMax = Integer.MIN_VALUE;
@@ -34,18 +34,13 @@ class Solution {
                     }
 
                 max = tempMax;
-                list.add(max);
+            list[count++] = max;
             }
 
             i++;
             j++;
         }
 
-        int[] res = new int[list.size()];
-
-        for(int x = 0; x < list.size(); x++)
-            res[x] = list.get(x);
-
-        return res;
+        return list;
     }
 }
