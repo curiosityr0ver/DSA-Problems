@@ -4,10 +4,8 @@ class Solution {
         int j = 0;
         
         for(int[] pair: queries) {
-            int val = pair[0];
-            int index = pair[1];
-            
-            nums[index] += val;
+
+            nums[pair[1]] +=  pair[0];
             
             int res = 0;
             
