@@ -9,9 +9,6 @@ class Solution {
 
         
         for(int[] pair: queries) {
-            
-            int val = pair[0];
-            int index = pair[1];
         
             if(nums[pair[1]] % 2 == 0) {
                 if(pair[0]%2 == 0) {
