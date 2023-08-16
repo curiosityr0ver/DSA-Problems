@@ -6,13 +6,10 @@ class Solution {
 
         
         for(int[] pair: queries) {
-            // if(nums[pair[1]] % 2 == 0) {
-            //     sum += pair[0]%2 == 0 ? pair[0] : -nums[pair[1]];
-                sum += nums[pair[1]] % 2 == 0 ? (pair[0]%2 == 0 ? pair[0] : -nums[pair[1]]) : (pair[0]%2 != 0) ?  nums[pair[1]] + pair[0] : 0;
+
+                sum += nums[pair[1]] % 2 == 0 ? pair[0]%2 == 0 ? pair[0] : -nums[pair[1]] : pair[0]%2 != 0 ?  nums[pair[1]] + pair[0] : 0;
 
                 
-            // } else if(pair[0]%2 != 0)sum += nums[pair[1]] + pair[0];
-
             nums[pair[1]] += pair[0];                      
             ans[j++] = sum;  
         }
