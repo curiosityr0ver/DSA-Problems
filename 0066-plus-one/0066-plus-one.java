@@ -18,10 +18,7 @@ class Solution {
                 res[i+1] = digits[i];
             }
             digits = res;
-        }
-        
-        System.out.println(carry);
-        
+        }        
         return digits;
     }
     
