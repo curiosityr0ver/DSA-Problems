@@ -11,9 +11,8 @@ class Solution {
                 if(!temp.equals(s.substring(j, j+i))) res = false;
                 // System.out.print(temp.equals(s.substring(j, j+i))+ ", ");
             } 
-            System.out.println(temp + ": " + res);
+            // System.out.println(temp + ": " + res);
             if(res) return true;
-            System.out.println();
         }
         
         return false;
