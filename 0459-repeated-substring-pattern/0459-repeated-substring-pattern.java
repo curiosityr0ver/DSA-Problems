@@ -18,12 +18,10 @@ class Solution {
         return false;
     }
     
-    boolean isEqual(String s, int r1, int l2) {
-        String s1 = s.substring(0, r1);
-        String s2 = s.substring(l2, r1+l2);
+    boolean isEqual(String s, int l, int r) {
         
-        for(int i = 0; i < r1; i++) {
-            if(s.charAt(i) != s.charAt(i+l2)) return false;
+        for(int i = 0; i < r; i++) {
+            if(s.charAt(i) != s.charAt(i+l)) return false;
         }
         
         return true;
