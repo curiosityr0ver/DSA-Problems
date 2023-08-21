@@ -8,7 +8,7 @@ class Solution {
             String temp = s.substring(0, i);
             boolean res = true;
             for(int j = i; j < s.length(); j+=i) {
-                if(!isEqual(s,0,i,j)) {
+                if(!isEqual(s, i, j)) {
                     res = false;
                     break;
                 } 
@@ -18,7 +18,7 @@ class Solution {
         return false;
     }
     
-    boolean isEqual(String s, int l1, int r1, int l2) {
+    boolean isEqual(String s, int r1, int l2) {
         String s1 = s.substring(0, r1);
         String s2 = s.substring(l2, r1+l2);
         
