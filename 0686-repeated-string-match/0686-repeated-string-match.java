@@ -12,11 +12,8 @@ class Solution {
        return -1; 
     }
     
-    boolean isSubs(String parent, String child) {
-            
-        for(int i = 0; i < parent.length() - child.length()+1; i++) {
-            if(equals(parent, child, i)) return true;
-        }
+    boolean isSubs(String parent, String child) {  
+        for(int i = 0; i < parent.length() - child.length()+1; i++) if(equals(parent, child, i)) return true;
         return false;
     }
     
