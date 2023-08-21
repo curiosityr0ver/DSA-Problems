@@ -8,7 +8,10 @@ class Solution {
             String temp = s.substring(0, i);
             boolean res = true;
             for(int j = i; j < s.length(); j+=i) {
-                if(!temp.equals(s.substring(j, j+i))) res = false;
+                if(!temp.equals(s.substring(j, j+i))) {
+                    res = false;
+                    break;
+                } 
                 // System.out.print(temp.equals(s.substring(j, j+i))+ ", ");
             } 
             // System.out.println(temp + ": " + res);
