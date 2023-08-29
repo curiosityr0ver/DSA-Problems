@@ -17,18 +17,10 @@ class MyStack {
     public int pop() {
         if(curr) {
             while(q1.size() > 1) q2.add(q1.remove());
-            
-            for(int ele: q2) System.out.print(ele + ", ");
-            System.out.println();
-            
             curr = !curr;
             return q1.remove();
         } else {
             while(q2.size() > 1) q1.add(q2.remove());
-            
-            for(int ele: q1) System.out.print(ele + ", ");
-            System.out.println();
-            
             curr = !curr;
             return q2.remove();
         }
@@ -39,20 +31,14 @@ class MyStack {
         
         if(curr) {
             while(q1.size() > 1) q2.add(q1.remove());
-            
             int res = q1.remove();
-            
             q2.add(res);
-            
             curr = !curr;
             return res;
         } else {
             while(q2.size() > 1) q1.add(q2.remove());
-            
             int res = q2.remove();
-            
             q1.add(res);
-            
             curr = !curr;
             return res;
         }
