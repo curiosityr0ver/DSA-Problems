@@ -1,29 +1,24 @@
 class MyStack {
         Queue<Integer> q1, q2;
-        boolean curr;
         int res;
     
 
     public MyStack() {
         q1 = new LinkedList<Integer>();
-        q2 = new LinkedList<Integer>();
-        curr = false;
-        
+        q2 = new LinkedList<Integer>();        
     }
     
     public void push(int x) {
-        if(curr) q1.add(x);
+        if(q2.isEmpty()) q1.add(x);
         else q2.add(x);
     }
     
     public int pop() {
         if(q2.isEmpty()) {
             while(q1.size() > 1) q2.add(q1.remove());
-            curr = !curr;
             return q1.remove();
         } else {
             while(q2.size() > 1) q1.add(q2.remove());
-            curr = !curr;
             return q2.remove();
         }
     }
@@ -39,7 +34,6 @@ class MyStack {
             res = q2.remove();
             q1.add(res);
         }
-        curr = !curr;
         return res;
     }
     
