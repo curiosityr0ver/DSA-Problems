@@ -30,7 +30,7 @@ class MyStack {
     
     public int top() {
         
-        if(curr) {
+        if(q2.isEmpty()) {
             while(q1.size() > 1) q2.add(q1.remove());
             res = q1.remove();
             q2.add(res);
