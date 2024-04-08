@@ -6,7 +6,6 @@ class Solution {
             if(ele == 0) c1++;
             else if(ele == 1) c2++;
         }
-        System.out.println(c1 + "< " + c2);
         for(int i = 0; i < nums.length; i++) {
             if(i < c1) nums[i] = 0;
             else if (i < c1+c2) nums[i] = 1;
